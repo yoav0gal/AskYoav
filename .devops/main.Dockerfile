@@ -13,7 +13,7 @@ RUN make
 
 FROM ubuntu:$UBUNTU_VERSION as runtime
 
-COPY --from=build /app/main /main
+COPY --from=buildbuild /app/main /main
 
 ENV LC_ALL=C.utf8
 

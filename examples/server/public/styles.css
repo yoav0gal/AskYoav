@@ -1,0 +1,134 @@
+body {
+    background-color: #111827;
+    color: #9ca3af;
+    font-family: system-ui;
+    font-size: 90%;
+}
+
+#container {
+    margin: 0em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 75%;
+}
+
+main {
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+
+    flex-grow: 1;
+    overflow-y: auto;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+body {
+    line-height: 1.2;
+    margin: 0 auto;
+    padding: 0 0.5em;
+}
+
+p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#write form {
+    margin: 1em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: stretch;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    justify-content: flex-end;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset.two {
+    display: grid;
+    grid-template: "a a";
+    gap: 1em;
+}
+
+fieldset.three {
+    display: grid;
+    grid-template: "a a a";
+    gap: 1em;
+}
+
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+    margin-top: 0.5em;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+textarea {
+    padding: 5px;
+    flex-grow: 1;
+    width: 100%;
+    background-color: #374151;
+    color: #9ca3af;
+}
+
+pre code {
+    display: block;
+    background-color: #222;
+    color: #ddd;
+}
+code {
+    font-family: monospace;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+}
+
+fieldset label {
+    margin: 0.5em 0;
+    display: block;
+}
+
+header > h1 {
+    font-size: 300%;
+    color: #fff;
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+footer {
+    font-size: 80%;
+    color: #888;
+}

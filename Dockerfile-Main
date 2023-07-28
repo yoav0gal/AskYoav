@@ -1,0 +1,25 @@
+ARG UBUNTU_VERSION=22.04
+
+FROM ubuntu:$UBUNTU_VERSION as build
+
+RUN apt-get update && \
+    apt-get install -y build-essential git
+
+WORKDIR /app
+
+COPY . .
+
+RUN make
+
+FROM ubuntu:$UBUNTU_VERSION as runtime
+
+COPY --from=build /app/main /main
+
+ENV LC_ALL=C.utf8
+
+ENTRYPOINT [ "/main" ]
+
+# To build
+# docker build -t llama-cpp 
+# TO run
+# docker run -v C:\Users\yoavg\VCProjects\llama.cpp\models\:/models -v C:\Users\yoavg\VCProjects\llama.cpp\prompts\:/prompts llama-cpp -ins -f prompts/alpaca.txt -m models/lama2-7B-chat.bin --color -c 2048 -n 128
